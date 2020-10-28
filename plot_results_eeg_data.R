@@ -108,10 +108,6 @@ load("./chb06_01.rda")
 # Get the number of variables
 d <- nrow(Q_amat_PLVAR)
 
-# Remove ones on the diagonal of the of LASSO2 and SCAD2 precision matrices
-Q_amat_LASSO2 <- Q_amat_LASSO2 - diag(d)
-Q_amat_SCAD2 <- Q_amat_SCAD2 - diag(d)
-
 # Make a plot with three subplots
 par(
   mfrow = c(3,1),
