@@ -131,7 +131,7 @@ run_iter <- function(iter, d){
           B_rec[2,j,k] <- NaN
           run_time[2,j,k] <- NaN
         } else {
-          Q_amat <- ((cg$theta-diag(d)) != 0)
+          Q_amat <- (cg$theta != 0 & diag(d) == 0)
           Q_hd[2,j,k] <- sum(Q_amat_true != Q_amat)/2
           Q_prec[2,j,k] <- sum(Q_amat_true+Q_amat == 2)/sum(Q_amat != 0)
           Q_rec[2,j,k] <- sum(Q_amat_true+Q_amat == 2)/sum(Q_amat_true != 0)
@@ -162,7 +162,7 @@ run_iter <- function(iter, d){
           B_rec[3,j,k] <- NaN
           run_time[3,j,k] <- NaN
         } else {
-          Q_amat <- ((cg$theta-diag(d)) != 0)
+          Q_amat <- (cg$theta != 0 & diag(d) == 0)
           Q_hd[3,j,k] <- sum(Q_amat_true != Q_amat)/2
           Q_prec[3,j,k] <- sum(Q_amat_true+Q_amat == 2)/sum(Q_amat != 0)
           Q_rec[3,j,k] <- sum(Q_amat_true+Q_amat == 2)/sum(Q_amat_true != 0)
