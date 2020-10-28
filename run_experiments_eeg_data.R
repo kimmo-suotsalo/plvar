@@ -180,6 +180,9 @@ for (recording_filename in recording_filenames) {
       # Measure the elapsed time
       t_diff <- difftime(Sys.time(), t_start, units = "secs")
       
+      # Insert ones on the diagonal
+      Q_amat <- Q_amat + diag(d)
+      
       # Calculate the number of directed edges in the estimated model
       nd <- sum(B_amat)
       
@@ -242,6 +245,9 @@ for (recording_filename in recording_filenames) {
       
       # Measure the elapsed time
       t_diff <- difftime(Sys.time(), t_start, units = "secs")
+      
+      # Insert ones on the diagonal
+      Q_amat <- Q_amat + diag(d)
       
       # Calculate the number of directed edges in the estimated model
       nd <- sum(B_amat)
