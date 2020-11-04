@@ -2,9 +2,9 @@
 
 High-dimensional structure learning of sparse vector autoregressive models using fractional marginal pseudo-likelihood
 
-<br>
-<br>
-<br>
+### Accessing the article
+
+Preprint at arXiv: https://arxiv.org/abs/2011.01484
 
 ### Downloading the EEG data
 
