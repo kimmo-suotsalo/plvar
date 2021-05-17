@@ -89,7 +89,7 @@ for (j in 1:2){
             #col.main = "gray25",
             ylim = c(0, 1),
             notch = FALSE)
-    box(col="gray25",lwd = 0.5)
+    box(col="gray25",lwd = 1)
     if (j == 1 & i == 1){
       legend(x = "bottomright", legend = c("PLVAR", "SCAD", "LASSO"), col = brewer.pal(n = 3, name = 'Dark2'), lty = 1, lwd = 5, cex = 1, bty = "n") 
     }
@@ -124,7 +124,7 @@ for (i in 1:3){
           yaxt = "n",
           frame = FALSE,
           #main = title[i],
-          ylim = c(0.1, s[2+i]*2),
+          ylim = c(0.5, s[2+i]*2),
           notch = FALSE)
   box(col="gray25", lwd = 1)
   if (i == 1){
@@ -163,11 +163,11 @@ for (i in 1:3){
   barplot(t(mm[[i]]),
           xlab="Estimated lag length", 
           col=brewer.pal(6, "Blues")[2:6],
-          #legend = paste("n =",colnames(mm[[i]])), 
+          #legend = paste("N =",colnames(mm[[i]])), 
           beside=TRUE)
   mtext(text = paste("d = ",ds[i], sep = ""), side = 3, line = 1, cex = 0.8)
   if (i == 1){
-    legend(x = "topright", legend = paste("n =",colnames(mm[[i]])), col = brewer.pal(n = 6, name = 'Blues')[2:6], lty = 1, lwd = 5, cex = 1, bty = "n") 
+    legend(x = "topright", legend = paste("N =",colnames(mm[[i]])), col = brewer.pal(n = 6, name = 'Blues')[2:6], lty = 1, lwd = 5, cex = 1, bty = "n") 
   }
   
 }
