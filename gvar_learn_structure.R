@@ -107,7 +107,7 @@ hc <- function(node, S, n, gamma){
   cand_score <- array(NaN, ncol(S))
   cand_score[node] <- -Inf
   add <- TRUE
-  while(add == TRUE){
+  while(add == TRUE & length(curr_par) < (n-1)){
     ind <- which(is.nan(cand_score))
     for (i in 1:length(ind)){
       cand_score[ind[i]] <- calc_ml(node, c(curr_par,ind[i]), S, n, gamma)
